@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     // Send email via Resend
     const { error } = await resend.emails.send({
-      from: "IntakeBrain <onboarding@resend.dev>", // Use your domain in production: noreply@intakebrain.com
+      from: "IntakeBrain <noreply@intakebrain.com>",
       to: "paulo@intakebrain.com",
       subject: `New Demo Request from ${data.firmName}`,
       html: `
