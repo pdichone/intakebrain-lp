@@ -3,13 +3,9 @@
 import { FadeIn } from "@/components/fade-in";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { calButtonProps } from "@/components/cal-embed";
 
-interface FinalCTAProps {
-  onRequestDemo: () => void;
-  onSeeSample: () => void;
-}
-
-export function FinalCTA({ onRequestDemo, onSeeSample }: FinalCTAProps) {
+export function FinalCTA() {
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-navy">
       <div className="max-w-4xl mx-auto text-center">
@@ -26,8 +22,8 @@ export function FinalCTA({ onRequestDemo, onSeeSample }: FinalCTAProps) {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              onClick={onRequestDemo}
               className="bg-gold text-navy hover:bg-gold/90 group text-base"
+              {...calButtonProps}
             >
               Request Demo
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -35,8 +31,8 @@ export function FinalCTA({ onRequestDemo, onSeeSample }: FinalCTAProps) {
             <Button
               size="lg"
               variant="outline"
-              onClick={onSeeSample}
               className="border-white/30 text-white hover:bg-white/10 hover:text-white text-base"
+              {...calButtonProps}
             >
               See Sample Summary
             </Button>

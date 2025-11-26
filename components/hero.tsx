@@ -3,13 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { ArrowRight } from "lucide-react";
+import { calButtonProps } from "@/components/cal-embed";
 
-interface HeroProps {
-  onRequestDemo: () => void;
-  onSeeSample: () => void;
-}
-
-export function Hero({ onRequestDemo, onSeeSample }: HeroProps) {
+export function Hero() {
   return (
     <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-light to-white">
       <div className="max-w-4xl mx-auto text-center">
@@ -30,11 +26,11 @@ export function Hero({ onRequestDemo, onSeeSample }: HeroProps) {
 
         <FadeIn delay={0.2}>
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button size="lg" onClick={onRequestDemo} className="group text-base">
+            <Button size="lg" className="group text-base" {...calButtonProps}>
               Request a 3-Minute Demo
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" onClick={onSeeSample} className="text-base">
+            <Button size="lg" variant="outline" className="text-base" {...calButtonProps}>
               See Sample Case Summary
             </Button>
           </div>

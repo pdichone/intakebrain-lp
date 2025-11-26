@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
@@ -11,34 +8,22 @@ import { Pricing } from "@/components/pricing";
 import { Founder } from "@/components/founder";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
-import { ContactForm } from "@/components/contact-form";
+import { CalEmbed } from "@/components/cal-embed";
 
 export default function Home() {
-  const [contactOpen, setContactOpen] = useState(false);
-
-  const handleRequestDemo = () => {
-    setContactOpen(true);
-  };
-
-  const handleSeeSample = () => {
-    // For now, open the contact form
-    // Later, this could link to a hosted PDF
-    setContactOpen(true);
-  };
-
   return (
     <main className="min-h-screen">
-      <Navbar onRequestDemo={handleRequestDemo} />
-      <Hero onRequestDemo={handleRequestDemo} onSeeSample={handleSeeSample} />
+      <CalEmbed />
+      <Navbar />
+      <Hero />
       <Features />
       <DemoVideo />
       <HowItWorks />
       <Benefits />
-      <Pricing onRequestDemo={handleRequestDemo} />
+      <Pricing />
       <Founder />
-      <FinalCTA onRequestDemo={handleRequestDemo} onSeeSample={handleSeeSample} />
+      <FinalCTA />
       <Footer />
-      <ContactForm open={contactOpen} onOpenChange={setContactOpen} />
     </main>
   );
 }

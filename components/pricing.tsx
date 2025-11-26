@@ -4,10 +4,7 @@ import { FadeIn } from "@/components/fade-in";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
-
-interface PricingProps {
-  onRequestDemo: () => void;
-}
+import { calButtonProps } from "@/components/cal-embed";
 
 const features = [
   "Up to 3 users",
@@ -18,7 +15,7 @@ const features = [
   "Cancel anytime",
 ];
 
-export function Pricing({ onRequestDemo }: PricingProps) {
+export function Pricing() {
   return (
     <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -65,7 +62,7 @@ export function Pricing({ onRequestDemo }: PricingProps) {
                 <Button
                   size="lg"
                   className="w-full group text-base"
-                  onClick={onRequestDemo}
+                  {...calButtonProps}
                 >
                   Request Demo
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
