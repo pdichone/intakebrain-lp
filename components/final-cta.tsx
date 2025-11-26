@@ -5,7 +5,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { calButtonProps } from "@/components/cal-embed";
 
-export function FinalCTA() {
+interface FinalCTAProps {
+  onViewSample: () => void;
+}
+
+export function FinalCTA({ onViewSample }: FinalCTAProps) {
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-navy">
       <div className="max-w-4xl mx-auto text-center">
@@ -32,7 +36,7 @@ export function FinalCTA() {
               size="lg"
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10 hover:text-white text-base"
-              {...calButtonProps}
+              onClick={onViewSample}
             >
               See Sample Summary
             </Button>

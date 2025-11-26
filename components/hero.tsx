@@ -5,7 +5,11 @@ import { FadeIn } from "@/components/fade-in";
 import { ArrowRight } from "lucide-react";
 import { calButtonProps } from "@/components/cal-embed";
 
-export function Hero() {
+interface HeroProps {
+  onViewSample: () => void;
+}
+
+export function Hero({ onViewSample }: HeroProps) {
   return (
     <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-light to-white">
       <div className="max-w-4xl mx-auto text-center">
@@ -30,7 +34,12 @@ export function Hero() {
               Request a 3-Minute Demo
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" className="text-base" {...calButtonProps}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-base"
+              onClick={onViewSample}
+            >
               See Sample Case Summary
             </Button>
           </div>
