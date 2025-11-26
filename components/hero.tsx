@@ -47,7 +47,7 @@ export function Hero({ onViewSample }: HeroProps) {
 
         <FadeIn delay={0.3}>
           <p className="mt-4 sm:mt-6 text-sm sm:text-base text-muted-foreground">
-            No contracts. No setup fees. Works with any PI workflow.
+            No contracts. Setup fees waived for pilot clients. Works with any PI workflow.
           </p>
         </FadeIn>
       </div>
