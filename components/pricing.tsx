@@ -70,6 +70,12 @@ export function Pricing({ onRequestDemo }: PricingProps) {
                   Request Demo
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
+
+                <div className="mt-4 py-2 px-3 bg-gold/10 rounded-lg border border-gold/30">
+                  <p className="text-center text-sm font-medium text-gold">
+                    Pilot pricing — limited time only
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>

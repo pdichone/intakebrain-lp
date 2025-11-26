@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
-import { Screenshots } from "@/components/screenshots";
+import { DemoVideo } from "@/components/demo-video";
 import { HowItWorks } from "@/components/how-it-works";
 import { Benefits } from "@/components/benefits";
 import { Pricing } from "@/components/pricing";
@@ -31,7 +31,7 @@ export default function Home() {
       <Navbar onRequestDemo={handleRequestDemo} />
       <Hero onRequestDemo={handleRequestDemo} onSeeSample={handleSeeSample} />
       <Features />
-      <Screenshots />
+      <DemoVideo />
       <HowItWorks />
       <Benefits />
       <Pricing onRequestDemo={handleRequestDemo} />
