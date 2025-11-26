@@ -71,26 +71,26 @@ export function ContactForm({ open, onOpenChange }: ContactFormProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="w-[calc(100%-2rem)] max-w-md mx-auto rounded-lg sm:rounded-xl">
         {isSuccess ? (
-          <div className="py-8 flex flex-col items-center justify-center text-center">
-            <CheckCircle2 className="w-16 h-16 text-green-500 mb-4" />
-            <h3 className="text-xl font-semibold text-navy mb-2">Thank You!</h3>
-            <p className="text-muted-foreground">
+          <div className="py-6 sm:py-8 flex flex-col items-center justify-center text-center">
+            <CheckCircle2 className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mb-3 sm:mb-4" />
+            <h3 className="text-lg sm:text-xl font-semibold text-navy mb-2">Thank You!</h3>
+            <p className="text-sm sm:text-base text-muted-foreground">
               We&apos;ll be in touch within 24 hours.
             </p>
           </div>
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-navy">Request a Demo</DialogTitle>
-              <DialogDescription>
+              <DialogTitle className="text-navy text-lg sm:text-xl">Request a Demo</DialogTitle>
+              <DialogDescription className="text-sm sm:text-base">
                 Fill out the form below and we&apos;ll reach out to schedule
                 your personalized demo.
               </DialogDescription>
             </DialogHeader>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 mt-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4 mt-3 sm:mt-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
                 <Input

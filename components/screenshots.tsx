@@ -36,41 +36,41 @@ export function Screenshots() {
     .filter((_, index) => index !== featuredIndex);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-light">
+    <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-light">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <h2 className="text-4xl sm:text-5xl font-bold text-navy text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy text-center mb-4">
             See It in Action
           </h2>
-          <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
+          <p className="text-center text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-12">
             Clean, professional interface designed for legal teams
           </p>
         </FadeIn>
 
         {/* Featured Screenshot */}
         <FadeIn delay={0.1}>
-          <div className="mb-8">
-            <div className="rounded-2xl overflow-hidden bg-white shadow-2xl border border-gray-200 p-3 transition-all duration-300">
+          <div className="mb-6 sm:mb-8">
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden bg-white shadow-xl sm:shadow-2xl border border-gray-200 p-2 sm:p-3 transition-all duration-300">
               <Image
                 src={featured.src}
                 alt={featured.title}
                 width={1200}
                 height={800}
-                className="w-full h-auto rounded-xl"
+                className="w-full h-auto rounded-lg sm:rounded-xl"
                 priority
               />
             </div>
-            <p className="mt-4 text-center text-lg font-semibold text-navy">
+            <p className="mt-3 sm:mt-4 text-center text-base sm:text-lg font-semibold text-navy">
               {featured.title}
             </p>
-            <p className="text-center text-muted-foreground">
+            <p className="text-center text-sm sm:text-base text-muted-foreground">
               {featured.description}
             </p>
           </div>
         </FadeIn>
 
         {/* Thumbnail Screenshots */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {thumbnails.map((item, index) => (
             <FadeIn key={item.src} delay={0.2 + index * 0.1}>
               <button
@@ -86,10 +86,10 @@ export function Screenshots() {
                     className="w-full h-auto rounded-lg"
                   />
                 </div>
-                <h3 className="mt-3 text-base font-semibold text-navy text-center group-hover:text-gold transition-colors">
+                <h3 className="mt-3 text-sm sm:text-base font-semibold text-navy text-center group-hover:text-gold transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground text-center">
+                <p className="text-xs sm:text-sm text-muted-foreground text-center">
                   Click to enlarge
                 </p>
               </button>
